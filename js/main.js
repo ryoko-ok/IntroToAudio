@@ -1,6 +1,6 @@
 (() => {
   // make a reference to all of the buttons
-  const playButtons = document.querySelectorAll('.playButtons'),
+  const playButtons = document.querySelectorAll('.playButton'),
         pauseButtons = document.querySelectorAll('.pauseButton')
         rwButtons = document.querySelectorAll('.rwButton'),
         audioElement = document.querySelector('audio');
@@ -14,7 +14,7 @@
     if (globalPaused) {
       console.log('paused');
       // if our audio is paused, then just play te track and exit
-      playTrack();
+      resumeTrack();
       return;
     }
 
@@ -30,9 +30,14 @@
     //playTrack();
   }
 
-  function pauseTrack() {
-    audioElement.play();
+  function resumeTrack() {
     globalPaused = false;
+    audioElement.play();
+  }
+
+  function pauseTrack() {
+    audioElement.pause();
+    globalPaused = true;
   }
 
   function rwTrack() {
