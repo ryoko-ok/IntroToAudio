@@ -1,0 +1,23 @@
+div {
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+}
+
+button {
+  /* display: block; */
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+  background-color: pink;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.controllers {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+}
